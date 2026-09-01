@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="16dp">
+
+    <!-- Top Connection & Triggers -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnL"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="L"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etIpAddress"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:hint="192.168.1.X"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:textSize="14sp"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Connect" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnR"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="R"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Left Controls: Analog & DPAD -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:id="@+id/analogBase"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@android:drawable/presence_online">
+
+            <ImageView
+                android:id="@+id/analogStick"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/btn_default_small" />
+        </FrameLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_marginStart="20dp">
+
+            <View android:layout_width="40dp" android:layout_height="40dp" />
+            <Button android:id="@+id/btnUp" android:layout_width="40dp" android:layout_height="40dp" android:text="▲" />
+            <View android:layout_width="40dp" android:layout_height="40dp" />
+
+            <Button android:id="@+id/btnLeft" android:layout_width="40dp" android:layout_height="40dp" android:text="◄" />
+            <View android:layout_width="40dp" android:layout_height="40dp" />
+            <Button android:id="@+id/btnRight" android:layout_width="40dp" android:layout_height="40dp" android:text="►" />
+
+            <View android:layout_width="40dp" android:layout_height="40dp" />
+            <Button android:id="@+id/btnDown" android:layout_width="40dp" android:layout_height="40dp" android:text="▼" />
+            <View android:layout_width="40dp" android:layout_height="40dp" />
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- Right Action Buttons -->
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <Button android:id="@+id/btnTriangle" android:layout_width="50dp" android:layout_height="50dp" android:text="△" android:layout_centerHorizontal="true" />
+        <Button android:id="@+id/btnSquare" android:layout_width="50dp" android:layout_height="50dp" android:text="□" android:layout_centerVertical="true" />
+        <Button android:id="@+id/btnCircle" android:layout_width="50dp" android:layout_height="50dp" android:text="◯" android:layout_centerVertical="true" android:layout_alignParentRight="true" />
+        <Button android:id="@+id/btnCross" android:layout_width="50dp" android:layout_height="50dp" android:text="✕" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <!-- Bottom Center Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button android:id="@+id/btnSelect" android:layout_width="80dp" android:layout_height="40dp" android:text="SELECT" android:textSize="10sp" />
+        <Button android:id="@+id/btnStart" android:layout_width="80dp" android:layout_height="40dp" android:text="START" android:textSize="10sp" android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>
